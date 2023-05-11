@@ -1,0 +1,22 @@
+<form [formGroup]="formAddGame" (ngSubmit)="handleAddGame()">
+<div class="form-group ">
+    <label class="form-label" for="inputValid">Title</label>
+    <input type="text"  class="form-control " id="inputValid" placeholder="Title" formControlName="title">
+    
+  </div>
+  <div class="form-group">
+    <fieldset>
+        <div class="form-group">
+            <label for="exampleTextarea">Description</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Description" formControlName="description"></textarea>
+          </div>
+    </fieldset>
+  </div>
+  <div class="form-group ">
+    <label class="form-label" for="inputValid">Image</label>
+    <input type="text"  class="form-control " id="inputValid" placeholder="image" formControlName="image">
+    
+  </div>
+  <button type="submit" class="btn btn-success mt-3" [disabled]="formAddGame.invalid">Create</button>
+  
+</form> 
